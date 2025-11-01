@@ -1,5 +1,5 @@
 // ==================== BASE URL ====================
-const API_BASE = "http://127.0.0.1:5000"; 
+const API_BASE = "https://event-attendance-prediction-1-0z9g.onrender.com/"; 
 
 // ==================== EVENT FORM LOGIC ====================
 document.addEventListener("DOMContentLoaded", (e) => {
