@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predict</title>
+
+    <!-- 👍 External Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/predict.css" />
+  </head>
+
+  <body class="bg-gradient">
+    <!-- Navbar -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a class="navbar-brand" href="#">
+            <img
+              src="../static/images/logo.jpg"
+              alt="Logo"
+              height="30"
+              class="d-inline-block align-text-top rounded-circle"
+            />
+            <span class="title">Predictor</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-left">
+              <li class="nav-item">
+                <a class="nav-link" href="./predict.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./eventform.html">Predict</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contact Form -->
+    <section
+      class="d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div
+        class="container bg-light p-4 rounded-4 shadow col-11 col-md-8 col-lg-6"
+      >
+        <h2 class="text-center text-primary fw-bold mb-3">Contact Us</h2>
+        <p class="text-center text-muted mb-4">
+          Have questions about the Event Attendance Predictor? Get in touch with
+          us below.
+        </p>
+
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Subject</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Subject"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Message</label>
+            <textarea
+              class="form-control"
+              rows="4"
+              placeholder="Type your message..."
+              required
+            ></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary fw-semibold">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-4">
+      <section class="footer-section">
+        <div class="container">
+          <div class="row text-center text-md-start p-4">
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold mb-3">Follow Us</h5>
+              <p>
+                <i class="bi bi-facebook me-2"></i
+                ><a href="#" class="footer-link" target="_blank"
+                  >facebook.com/SocialTechGlobal</a
+                >
+              </p>
+              <p>
+                <i class="bi bi-twitter me-2"></i
+                ><a href="#" class="footer-link" target="_blank">@Social</a>
+              </p>
+              <p>
+                <i class="bi bi-instagram me-2"></i
+                ><a href="#" class="footer-link" target="_blank">@Social.in</a>
+              </p>
+              <p>
+                <i class="bi bi-linkedin me-2"></i
+                ><a href="#" class="footer-link" target="_blank"
+                  >linkedin.com/company/Socialtech</a
+                >
+              </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold mb-3">Contact Us</h5>
+              <p><i class="bi bi-envelope me-2"></i>support@SocialTech.com</p>
+              <p><i class="bi bi-telephone me-2"></i>+91 98765 43210</p>
+              <p><i class="bi bi-globe me-2"></i>www.SocialTech.com</p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold mb-3">Head Office</h5>
+              <p>
+                <i class="bi bi-geo-alt me-2"></i>Level 8, TechSquare Tower,
+                Hyderabad
+              </p>
+              <p><i class="bi bi-clock me-2"></i>Mon–Fri: 9AM–6PM</p>
+              <p><i class="bi bi-envelope me-2"></i>info@SocialTech.com</p>
+            </div>
+          </div>
+          <hr class="border-light" />
+          <div class="text-center">
+            <small>&copy; 2025 SocialTech. All rights reserved.</small>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/predict.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBXgRAddcUy3atyVytERhBjZ1P81EZwOyQ",
+        authDomain: "event-predictor-ccd5b.firebaseapp.com",
+        projectId: "event-predictor-ccd5b",
+        storageBucket: "event-predictor-ccd5b.appspot.com",
+        messagingSenderId: "1012555787667",
+        appId: "1:1012555787667:web:f4b02d5ae93929fff40c66",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      const contactForm = document.getElementById("contactForm");
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = contactForm.querySelector(
+          'input[placeholder="Enter your name"]'
+        ).value;
+        const email = contactForm.querySelector(
+          'input[placeholder="Enter your email"]'
+        ).value;
+        const subject = contactForm.querySelector(
+          'input[placeholder="Subject"]'
+        ).value;
+        const message = contactForm.querySelector("textarea").value;
+
+        try {
+          await addDoc(collection(db, "contacts"), {
+            name,
+            email,
+            subject,
+            message,
+            timestamp: new Date(),
+          });
+          alert("✅ Message sent successfully!");
+          contactForm.reset();
+        } catch (error) {
+          console.error("Error adding document: ", error);
+          alert("❌ Failed to send message. Try again!");
+        }
+      });
+    </script>
+  </body>
+</html>
