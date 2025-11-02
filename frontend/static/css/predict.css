@@ -320,7 +320,7 @@ header .title {
 }
 
 .chart-box {
-  flex: 1 1 48%;
+  flex: 1 1 50%;
   padding: 20px;
   background: #f9f9f9;
   border-radius: 10px;
