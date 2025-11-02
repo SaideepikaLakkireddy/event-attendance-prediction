@@ -1,5 +1,3 @@
-/* event input form css */
-
 /* GENERAL STYLING */
 .eventsection {
   background-image: url(/static/images/premium_photo-1675583054046-31d8d9c2c794.avif);
@@ -286,6 +284,7 @@ header .title {
 }
 
 /* DASHBOARD */
+
 .dashbody {
   background: linear-gradient(135deg, #e3f2fd, #fce4ec);
   font-family: "Poppins", sans-serif;
@@ -315,12 +314,22 @@ header .title {
 .model-box {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: space-between;
+  gap: 20px;
+}
+
+
+.model-box > div {
+  flex: 1 1 calc(50% - 20px);
+}
+
+@media (max-width: 768px) {
+  .model-box > div {
+    flex: 1 1 100%;
+  }
 }
 
 .chart-box {
-  flex: 1 1 50%;
   padding: 20px;
   background: #f9f9f9;
   border-radius: 10px;
