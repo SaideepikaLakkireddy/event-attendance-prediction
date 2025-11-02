@@ -24,7 +24,7 @@ print("✅ Models loaded successfully")
 # ---------- HOME ROUTE ----------
 @app.route('/')
 def home():
-    return render_template('about.html')
+    return render_template('predict.html')
 
 # ---------- PREDICTION ----------
 @app.route("/predict", methods=["POST"])
