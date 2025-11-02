@@ -29,6 +29,22 @@ h2.formTitle {
 }
 
 /* RESPONSIVE FIXES */
+
+@media (max-width: 600px) {
+  button {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 2rem 1.2rem !important;
