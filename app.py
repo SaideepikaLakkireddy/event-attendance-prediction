@@ -1,11 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import pickle
 import numpy as np
 import os
 
-app = Flask(__name__)
+app = Flask(__name__,
+            template_folder='frontend/templates',
+            static_folder='frontend/static')
 CORS(app, resources={r"/*": {"origins": ["http://127.0.0.1:5500"]}})
+
 
 # ---------- LOAD ML MODEL FILES ----------
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "models")
@@ -18,10 +21,10 @@ with open(os.path.join(MODEL_DIR, "scaler1.pkl"), "rb") as f:
 
 print("✅ Models loaded successfully")
 
-# ---------- TEST ROUTE ----------
-@app.route("/", methods=["GET"])
+# ---------- HOME ROUTE ----------
+@app.route('/')
 def home():
-    return jsonify({"message": "Flask backend running ✅"})
+    return render_template('about.html')
 
 # ---------- PREDICTION ----------
 @app.route("/predict", methods=["POST"])
