@@ -26,6 +26,22 @@ print("✅ Models loaded successfully")
 def home():
     return render_template('predict.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/eventform')
+def eventform():
+    return render_template('eventform.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
 # ---------- PREDICTION ----------
 @app.route("/predict", methods=["POST"])
 def predict():

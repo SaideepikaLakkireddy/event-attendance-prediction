@@ -3,56 +3,75 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>dynamic event attendance predictor</title>
+    <title>Dynamic Event Attendance Predictor</title>
 
-    <!--external links -->
+    <!-- External links -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../frontend/static/css/predict.css"/>
+    <!-- ✅ Correct Flask CSS link -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/predict.css') }}"
+    />
   </head>
+
   <body>
-     <!-- 😁header start -->
-  <header class="sticky-top">
-    <!-- 👌nav start -->
-    <nav class="navbar navbar-expand-sm">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- 😁 Header start -->
+    <header class="sticky-top">
+      <!-- 👌 Nav start -->
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- logo-start -->
-        <a class="navbar-brand" href="#">
-          <img src="../static/images/logo.jpg" alt="Logo" height="30" class="d-inline-block align-text-top rounded-circle" />
-          <span class="title">Predictor</span>
-        </a>
-        <!-- logo-end -->
+          <!-- ✅ Logo start -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="{{ url_for('static', filename='images/logo.jpg') }}"
+              alt="Logo"
+              height="30"
+              class="d-inline-block align-text-top rounded-circle"
+            />
+            <span class="title">Predictor</span>
+          </a>
+          <!-- ✅ Logo end -->
 
-        <!-- nav links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-left">
-            <li class="nav-item">
-              <a class="nav-link" href="./predict.html">Home</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="./eventform.html">Predict</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact Us</a>
-            </li>
-          </ul>
-    </nav>
-    <!-- 👌nav end -->
+          <!-- ✅ Nav links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-left">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('eventform') }}">Event Form</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- 👌 Nav end -->
+    </header>
+    <!-- 😁 Header end -->
 
-  </header>
-  <!-- 😁header end -->
     <!-- about start -->
     <div class="about-section">
       <h2 class="about-title">About Us</h2>
@@ -86,88 +105,169 @@
     </div>
     <!-- about end -->
 
-    <!-- Why Choose us start -->
-<div class="why-choose-section">
-  <h2 class="why-choose-title">Why Choose Us</h2>
-  <div class="choose-grid">
-    <div class="choose-item">
-      <div class="icon">🎯</div>
-      <p><strong>Accurate Predictions:</strong> We use intelligent algorithms to predict event attendance based on event type, audience behavior, season, timing, and past trends.</p>
-    </div>
-    <div class="choose-item">
-      <div class="icon">📋</div>
-      <p><strong>Better Planning, Better Results:</strong> From venue size and seating to catering and volunteers, our predictions help you plan every part of your event efficiently.</p>
-    </div>
-    <div class="choose-item">
-      <div class="icon">💸</div>
-      <p><strong>Saves Time & Budget:</strong> Avoid over-spending or under-preparing. Use your resources wisely with our smart planning assistant.</p>
-    </div>
-    <div class="choose-item">
-      <div class="icon">🧠</div>
-      <p><strong>Easy to Use:</strong> You don't need technical knowledge. Just enter event details and get instant predictions with a simple and friendly interface.</p>
-    </div>
-    <div class="choose-item">
-      <div class="icon">📊</div>
-      <p><strong>Smart Insights:</strong> Get meaningful data that helps improve future events and decision-making.</p>
-    </div>
-    <div class="choose-item">
-      <div class="icon">🌐</div>
-      <p><strong>Useful for All Events:</strong> Designed for colleges, companies, event managers, institutes, NGOs, and organizers of any event.</p>
-    </div>
-    <div class="choose-item">
-      <div class="icon">🚀</div>
-      <p><strong>Reliable & Scalable:</strong> Built using modern technology to grow with your needs — today and in the future.</p>
-    </div>
-  </div>
-</div>
- <!-- Why Choose us end -->
-
- <!-- footer start -->
-<footer class="footer text-white py-4">
-  <section class="footer-section">
-    <div class="container">
-      <div class="row text-center text-md-start p-4">
-        <!-- Column 1: Social Media -->
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold mb-3">Follow Us</h5>
-          <p><i class="bi bi-facebook me-2"></i><a href="https://facebook.com/TechGlobal" class="footer-link" target="_blank">facebook.com/SocialTechGlobal</a></p>
-          <p><i class="bi bi-twitter me-2"></i><a href="https://twitter.com/SocialTechGlobal" class="footer-link" target="_blank">@Social</a></p>
-          <p><i class="bi bi-instagram me-2"></i><a href="https://instagram.com/Social.in" class="footer-link" target="_blank">@Social.in</a></p>
-          <p><i class="bi bi-linkedin me-2"></i><a href="https://linkedin.com/company/Social" class="footer-link" target="_blank">linkedin.com/company/Socialtech</a></p>
+    <!-- Why Choose Us start -->
+    <div class="why-choose-section">
+      <h2 class="why-choose-title">Why Choose Us</h2>
+      <div class="choose-grid">
+        <div class="choose-item">
+          <div class="icon">🎯</div>
+          <p>
+            <strong>Accurate Predictions:</strong> We use intelligent algorithms
+            to predict event attendance based on event type, audience behavior,
+            season, timing, and past trends.
+          </p>
         </div>
-
-        <!-- Column 2: Contact Info -->
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold mb-3">Contact Us</h5>
-          <p><i class="bi bi-envelope me-2"></i><a href="mailto:support@Socialtech.com" class="footer-link">support@SocialTech.com</a></p>
-          <p><i class="bi bi-telephone me-2"></i><a href="tel:+919876543210" class="footer-link">+91 98765 43210</a></p>
-          <p><i class="bi bi-globe me-2"></i><a href="https://Socialtech.com" class="footer-link" target="_blank">www.SocialTech.com</a></p>
+        <div class="choose-item">
+          <div class="icon">📋</div>
+          <p>
+            <strong>Better Planning, Better Results:</strong> From venue size
+            and seating to catering and volunteers, our predictions help you
+            plan every part of your event efficiently.
+          </p>
         </div>
-
-        <!-- Column 3: Address -->
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold mb-3">Head Office</h5>
-          <p><i class="bi bi-geo-alt me-2"></i>Level 8, TechSquare Tower, Hyderabad</p>
-          <p><i class="bi bi-clock me-2"></i>Mon–Fri: 9AM–6PM</p>
-          <p><i class="bi bi-envelope me-2"></i>info@SocialTech.com</p>
+        <div class="choose-item">
+          <div class="icon">💸</div>
+          <p>
+            <strong>Saves Time & Budget:</strong> Avoid over-spending or
+            under-preparing. Use your resources wisely with our smart planning
+            assistant.
+          </p>
+        </div>
+        <div class="choose-item">
+          <div class="icon">🧠</div>
+          <p>
+            <strong>Easy to Use:</strong> You don't need technical knowledge.
+            Just enter event details and get instant predictions with a simple
+            and friendly interface.
+          </p>
+        </div>
+        <div class="choose-item">
+          <div class="icon">📊</div>
+          <p>
+            <strong>Smart Insights:</strong> Get meaningful data that helps
+            improve future events and decision-making.
+          </p>
+        </div>
+        <div class="choose-item">
+          <div class="icon">🌐</div>
+          <p>
+            <strong>Useful for All Events:</strong> Designed for colleges,
+            companies, event managers, institutes, NGOs, and organizers of any
+            event.
+          </p>
+        </div>
+        <div class="choose-item">
+          <div class="icon">🚀</div>
+          <p>
+            <strong>Reliable & Scalable:</strong> Built using modern technology
+            to grow with your needs — today and in the future.
+          </p>
         </div>
       </div>
-
-      <hr class="border-light" />
-      <div class="text-center ">
-        <small>&copy; 2025 SocialTech. All rights reserved.</small>
-      </div>
     </div>
-  </section>
-</footer>
+    <!-- Why Choose Us end -->
 
-<!-- footer end -->
-    <!-- external links -->
+    <!-- footer start -->
+    <footer class="footer text-white py-4">
+      <section class="footer-section">
+        <div class="container">
+          <div class="row text-center text-md-start p-4">
+            <!-- Column 1: Social Media -->
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold mb-3">Follow Us</h5>
+              <p>
+                <i class="bi bi-facebook me-2"></i
+                ><a
+                  href="https://facebook.com/TechGlobal"
+                  class="footer-link"
+                  target="_blank"
+                  >facebook.com/SocialTechGlobal</a
+                >
+              </p>
+              <p>
+                <i class="bi bi-twitter me-2"></i
+                ><a
+                  href="https://twitter.com/SocialTechGlobal"
+                  class="footer-link"
+                  target="_blank"
+                  >@Social</a
+                >
+              </p>
+              <p>
+                <i class="bi bi-instagram me-2"></i
+                ><a
+                  href="https://instagram.com/Social.in"
+                  class="footer-link"
+                  target="_blank"
+                  >@Social.in</a
+                >
+              </p>
+              <p>
+                <i class="bi bi-linkedin me-2"></i
+                ><a
+                  href="https://linkedin.com/company/Social"
+                  class="footer-link"
+                  target="_blank"
+                  >linkedin.com/company/Socialtech</a
+                >
+              </p>
+            </div>
+
+            <!-- Column 2: Contact Info -->
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold mb-3">Contact Us</h5>
+              <p>
+                <i class="bi bi-envelope me-2"></i
+                ><a href="mailto:support@Socialtech.com" class="footer-link"
+                  >support@SocialTech.com</a
+                >
+              </p>
+              <p>
+                <i class="bi bi-telephone me-2"></i
+                ><a href="tel:+919876543210" class="footer-link"
+                  >+91 98765 43210</a
+                >
+              </p>
+              <p>
+                <i class="bi bi-globe me-2"></i
+                ><a
+                  href="https://Socialtech.com"
+                  class="footer-link"
+                  target="_blank"
+                  >www.SocialTech.com</a
+                >
+              </p>
+            </div>
+
+            <!-- Column 3: Address -->
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold mb-3">Head Office</h5>
+              <p>
+                <i class="bi bi-geo-alt me-2"></i>Level 8, TechSquare Tower,
+                Hyderabad
+              </p>
+              <p><i class="bi bi-clock me-2"></i>Mon–Fri: 9AM–6PM</p>
+              <p><i class="bi bi-envelope me-2"></i>info@SocialTech.com</p>
+            </div>
+          </div>
+
+          <hr class="border-light" />
+          <div class="text-center">
+            <small>&copy; 2025 SocialTech. All rights reserved.</small>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- footer end -->
+
+    <!-- ✅ External JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="../frontend/static/js/predict.js"></script>
+
+    <!-- ✅ Flask JS path -->
+    <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
   </body>
 </html>

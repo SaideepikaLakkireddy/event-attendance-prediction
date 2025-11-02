@@ -1,12 +1,13 @@
 // ==================== BASE URL ====================
-const API_BASE = "https://event-attendance-prediction-1-0z9g.onrender.com/"; 
+const API_BASE = "http://127.0.0.1:5000";
+// const API_BASE = "https://event-attendance-prediction-1-0z9g.onrender.com"; 
 
 // ==================== EVENT FORM LOGIC ====================
 document.addEventListener("DOMContentLoaded", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
 
   // Check if current page is event form
-  if (window.location.pathname.includes("eventform.html")) {
+  if (window.location.pathname.includes("eventform")) {
     let submitBtn = document.querySelector(".submit");
     let climatebtn = document.querySelector(".climatebtn");
 
@@ -131,7 +132,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             })
           );
 
-          window.location.href = "./dashboard.html";
+          window.location.href = "./dashboard";
         } else {
           alert("Error: " + result.error);
         }
@@ -144,12 +145,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
 });
 
 // ==================== DASHBOARD PAGE ====================
-if (window.location.pathname.includes("dashboard.html")) {
+if (window.location.pathname.includes("dashboard")) {
   let storedData = JSON.parse(localStorage.getItem("predictionData"));
 
   if (!storedData) {
     alert("No prediction data found. Please submit the form first.");
-    window.location.href = "./eventform.html";
+    window.location.href = "./eventform";
   } else {
     showDashboard(storedData.prediction, storedData.formData);
   }
@@ -240,5 +241,5 @@ let btnagain = document.querySelector(".predict-btn");
 console.log(btnagain);
 
 btnagain.addEventListener("click", () => {
-  window.location.href = "./eventform.html";
+  window.location.href = "./eventform";
 });
